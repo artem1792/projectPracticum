@@ -12,13 +12,7 @@ func main() {
 }
 
 func Task5(year int) string {
-	if year%400 == 0 {
-		return "YES"
-	}
-	if year%100 == 0 {
-		return "NO"
-	}
-	if year%4 == 0 {
+	if year%400 == 0 || year%4 == 0 && year%100 != 0 {
 		return "YES"
 	}
 	return "NO"
